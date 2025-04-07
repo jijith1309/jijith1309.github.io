@@ -42,4 +42,4 @@ Outside of the IDE, I’m someone who finds joy in the little things that spark 
 - 📧 Email: [jijith1309@gmail.com](mailto:jijith1309@gmail.com)  
 - 💼 LinkedIn: [linkedin.com/in/jijith-ms-89082492](https://www.linkedin.com/in/jijith-ms-89082492/)
 
-Let’s build something meaningful — or just talk tech, road trips, or movie twists.
+Let’s build something meaningful- or just talk tech, road trips, or movie twists.
