@@ -1,1 +1,424 @@
-/* add your scss tweaks here */
+/* ============================================
+   Custom Styles — Jijith MS Portfolio
+   ============================================ */
+
+/* --- Header --- */
+.navbar.bg-dark {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  border-bottom: 2px solid #4f46e5;
+  padding: 0.8rem 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #e2e8f0 !important;
+  letter-spacing: 0.3px;
+}
+
+.navbar-brand:hover { color: #818cf8 !important; }
+
+.nav-link {
+  font-weight: 500;
+  color: #cbd5e1 !important;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active { color: #818cf8 !important; }
+
+/* --- Hero Section --- */
+.hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0c1a2e 100%);
+  color: #f1f5f9;
+  padding: 5rem 0 4.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 3px solid rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 60px rgba(99, 102, 241, 0.5);
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  line-height: 1.2;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.hero-tagline .hl { color: #818cf8; font-weight: 600; }
+
+/* --- Buttons --- */
+.btn-indigo {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+
+.btn-indigo:hover {
+  background: #4338ca;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  color: #818cf8;
+  border: 2px solid rgba(129, 140, 248, 0.5);
+  padding: 0.55rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  background: transparent;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btn-ghost:hover {
+  background: rgba(79, 70, 229, 0.15);
+  color: #a5b4fc;
+  border-color: #818cf8;
+}
+
+/* --- Section Styles --- */
+.section-wrapper { padding: 4rem 0; }
+.section-wrapper.alt { background: #f8fafc; }
+
+.section-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #1e293b;
+  border-left: 4px solid #4f46e5;
+  padding-left: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+/* --- Skills --- */
+.skill-cat-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 0.5rem;
+}
+
+.skill-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin: 0.18rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.sb-backend  { background: #ede9fe; color: #5b21b6; }
+.sb-frontend { background: #dcfce7; color: #166534; }
+.sb-cloud    { background: #dbeafe; color: #1e40af; }
+.sb-devops   { background: #fce7f3; color: #9d174d; }
+.sb-ai       { background: #fef3c7; color: #92400e; }
+
+/* --- Experience Timeline --- */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.45rem;
+  top: 0.5rem;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #4f46e5, #06b6d4);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.65rem;
+  top: 0.45rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #4f46e5;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
+}
+
+.timeline-role {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.timeline-period {
+  display: inline-block;
+  font-size: 0.72rem;
+  color: #fff;
+  background: #4f46e5;
+  border-radius: 50px;
+  padding: 0.12rem 0.65rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.timeline-company {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Portfolio Cards --- */
+.portfolio-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  overflow: hidden;
+  background: #fff;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.12);
+  border-color: #a5b4fc;
+}
+
+.portfolio-card .card-body { padding: 1.5rem; }
+
+.portfolio-card .card-title {
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.tech-tag {
+  font-size: 0.73rem;
+  padding: 0.18rem 0.6rem;
+  border-radius: 50px;
+  background: #f1f5f9;
+  color: #475569;
+  display: inline-block;
+  margin: 0.15rem;
+}
+
+/* --- Blog Cards --- */
+.blog-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  transition: transform 0.25s, box-shadow 0.25s;
+  overflow: hidden;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.09);
+}
+
+.blog-card .card-body { padding: 1.4rem; }
+
+.blog-date {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.blog-cat {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #4f46e5;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #ede9fe 100%);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.55rem 1.25rem;
+  border: 2px solid #a5b4fc;
+  border-radius: 8px;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.contact-link:hover {
+  background: #4f46e5;
+  color: #fff;
+  border-color: #4f46e5;
+}
+
+/* --- Footer --- */
+footer.mt-auto {
+  background: #0f172a !important;
+  border-top: 1px solid #1e293b !important;
+}
+
+footer.mt-auto a {
+  color: #818cf8;
+  text-decoration: none;
+}
+
+footer.mt-auto a:hover { color: #a5b4fc; }
+
+/* --- Blog/Post Layout --- */
+.post-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f1f5f9;
+  padding: 3rem 0 2.5rem;
+  margin-bottom: 0;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  line-height: 1.3;
+}
+
+.post-meta {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  margin-top: 0.5rem;
+}
+
+.post-tag {
+  display: inline-block;
+  background: rgba(79, 70, 229, 0.25);
+  color: #a5b4fc;
+  border-radius: 50px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+.post-content {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #334155;
+}
+
+.post-content h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  border-left: 3px solid #4f46e5;
+  padding-left: 0.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #334155;
+  margin-top: 1.75rem;
+}
+
+.post-content code {
+  background: #f1f5f9;
+  color: #4f46e5;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+.post-content pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.post-content pre code {
+  background: transparent;
+  color: #e2e8f0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.post-content a { color: #4f46e5; }
+.post-content a:hover { color: #4338ca; }
+
+/* --- About Page --- */
+.about-content h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+  border-left: 3px solid #4f46e5;
+  padding-left: 0.65rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}

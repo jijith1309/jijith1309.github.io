@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="post-header">
+  <div class="container">
+    <div class="col-lg-8 mx-auto">
+      <p class="blog-cat mb-2">{{ page.categories | join: " · " | upcase }}</p>
+      <h1 class="post-title mb-3">{{ page.title }}</h1>
+      <p class="post-meta">
+        {{ page.date | date: "%B %d, %Y" }}
+        {% if page.tags and page.tags.size > 0 %}
+        &nbsp;·&nbsp;
+        {% for tag in page.tags %}<span class="post-tag">#{{ tag }}</span>{% endfor %}
+        {% endif %}
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="col-lg-8 mx-auto post-content">
+    {{ content }}
+    <hr class="my-5" style="border-color:#e2e8f0">
+    <div class="d-flex justify-content-between align-items-center">
+      <a href="{{ '/blog' | relative_url }}" class="fw-semibold text-decoration-none" style="color:#4f46e5">&larr; All Posts</a>
+      <a href="https://github.com/jijith1309/ai-apps-collection" target="_blank" class="fw-semibold text-decoration-none" style="color:#4f46e5">View on GitHub &rarr;</a>
+    </div>
+  </div>
+</div>

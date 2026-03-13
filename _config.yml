@@ -1,11 +1,15 @@
-title: My Portfolio
-email: your.email@example.com
+title: Jijith MS
+author: Jijith MS
+email: jijith1309@gmail.com
 description: >-
-  This is my personal portfolio website built with Jekyll and GitHub Pages.
-baseurl: "" # for user.github.io, leave this empty
-url: "https://jijith1309.github.io" # change to your GitHub Pages URL
+  Senior .NET Developer from Kochi, Kerala. Building with .NET Core, Angular & Azure. Exploring GenAI.
+baseurl: ""
+url: "https://jijith1309.github.io"
+year: 2025
 
 theme: minima
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
