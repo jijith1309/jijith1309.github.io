@@ -28,6 +28,86 @@ See [docs/create-website.md](https://github.com/thecdil/bootstrap5-template/blob
 - Add custom CSS to `_sass/_custom.scss` (content of `_sass/_template.scss` relates to template components)
 - Use Bootstrap to customize `_layouts/` and `_includes/template/`.
 
+## Blog System
+
+This site includes a built-in blog system powered by Jekyll. The blog can be accessed via the "Blog" link in the navigation menu.
+
+### Adding New Blog Posts
+
+To create a new blog post:
+
+1. **Create a new file** in the `_posts/` directory following Jekyll's naming convention:
+   ```
+   YYYY-MM-DD-title-with-hyphens.md
+   ```
+   Example: `2024-12-15-my-new-blog-post.md`
+
+2. **Add front matter** at the top of your file:
+   ```yaml
+   ---
+   layout: post
+   title: "Your Blog Post Title"
+   date: 2024-12-15 10:30:00 +0530
+   author: "Your Name"
+   tags: [tag1, tag2, tag3]
+   excerpt: "A brief description of your post that appears in the blog index."
+   ---
+   ```
+
+3. **Write your content** in Markdown format below the front matter. You can use:
+   - Headers (`# ## ###`)
+   - Code blocks with syntax highlighting (```language)
+   - Lists, links, images, and other Markdown features
+   - HTML when needed for advanced formatting
+
+4. **Preview your post** by running `bundle exec jekyll serve` locally and visiting `http://localhost:4000/blog/`
+
+### Blog Features
+
+- **Responsive design** with Bootstrap 5 styling
+- **Syntax highlighting** for code blocks
+- **Tag system** for categorizing posts
+- **Post navigation** (Previous/Next links)
+- **SEO-friendly** URLs and meta tags
+- **RSS feed** automatically generated
+- **Search functionality** (posts are included in site search)
+
+### Example Blog Post Structure
+
+```markdown
+---
+layout: post
+title: "Getting Started with Azure DevOps"
+date: 2024-12-15 14:20:00 +0530
+author: "Jijith MS"
+tags: [azure, devops, ci-cd, automation]
+excerpt: "Learn how to set up CI/CD pipelines in Azure DevOps for automated deployments."
+---
+
+# Getting Started with Azure DevOps
+
+Your content goes here...
+
+## Code Example
+
+```yaml
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+```
+
+## Conclusion
+
+Wrap up your thoughts here.
+```
+
 ## Template Assets
 
 Included in assets/lib folder:
